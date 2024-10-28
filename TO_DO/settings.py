@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-r#j$x1-35=*a7@gecdf*0-x&61@-8!x^u@8)&+sqi4im4k@ddr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app", "127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "https://osamaTasks.pythonanywhere.com"]
 
 
 # Application definition
@@ -69,7 +69,7 @@ WSGI_APPLICATION = 'TO_DO.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'tmp' / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -105,9 +105,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-CORS_ALLOWED_ORIGINS = [
-    "https://TO_DO.vercel.app"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://TO_DO.vercel.app",
+#     'https://127.0.0.1:5500'
+# ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 
